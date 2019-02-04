@@ -1,11 +1,29 @@
 Webgym Schlachtplan:
-1. Die verschiedenen Bausteine von Angular kennenlernen und definieren. (Modules, Components, Routes, Pipes, Directive, usw.)
-2. Funktionalität von Home, Trainingsplan, Ernährungsplan, Rezeptbuch, Bibliothek, Tagebuch schreiben
-3. Website Routing einrichten
-4. Website design so weit bringe, dass die Funktionalitäten der Website benutzt werden können
-5. Middleware API erstellen
-6. Backend Datenbank erstellen
-7. Erste Live-Version testen 
-8.
-9.
-10.
+1. Funktionalität von Trainingsplan und Ernährungsplan fertigstellen
+2. Website redesign machen
+   1. Bootstrap integrieren
+   2. Momentanes Grid-Layout mit dem Bootstrap Grid-System auswechseln
+   3. Website so designen das sie bereit ist um live zu gehen
+3. Middleware: Technologien/Produkte anschauen und mich auf eine festlegen
+4. Middleware: Middleware-API schreiben
+5. Backend: Datenbanklösung auswählen und das Model aufsetzen
+6. Testfälle für die erste Live version schreiben
+7. Front-End, Middleware und Backend mit den Testfällen testen
+8. Go Live!!
+
+Nach der ersten Veröffentlichung:
+- Designs für die verschiedenen Viewports erstellen (small, medium, large)
+- Webiste auf alle Viewports skalieren (Make website responsive)
+- Benutzer für meine Webapp finden
+- Umfrage zur Benutzer-Freundlichkeit meiner Webapp erstellen und versenden
+- Umfrage Ergebnisse analysieren und basierend darauf neue Schritte planen
+
+Optional:
+- Systemalarms einrichten
+- Mailserver + Account einrichten
+- Monitoring der Systeme
+
+Bereits erledigt:
+- Website Grundgerüst
+- Funktionalität von Tagebuch, Rezeptbuch und Bibliothek geschrieben.
+- Websiten routing eingerichtet
