@@ -1,4 +1,4 @@
-#Webgym Schlachtplan
+# Webgym Schlachtplan
 
 Plan:
 1. Funktionalität von Trainingsplan und Ernährungsplan fertigstellen
