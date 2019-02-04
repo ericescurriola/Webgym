@@ -1,0 +1,11 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--nav-orange);
+    height: 50px;
+    align-items: center;
+}
+
+nav > ul > li > a {
+    color: white;
+}

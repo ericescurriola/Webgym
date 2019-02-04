@@ -1,0 +1,45 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px 1fr 100px;
+    padding: 10px;
+    margin: 10px;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+    padding: 5px;  
+}
+
+ul {
+    list-style-type: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: lightgray;
+    /*width: 215px;*/
+}
+  
+li {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+  
+li:hover {
+    background-color: darkgrey;
+}
+
+.image-replacer {   
+    height: 50%;
+    background-color: black;
+    justify-content: center;
+}
+
+p {
+    margin: 5px 0px 0px 0px;
+}

@@ -1,0 +1,35 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    margin: 10px;
+    grid-gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    text-align: center;
+    align-content: center;
+    padding: 5px;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+}
+
+label {
+    width: 50%;
+}
+
+input {
+    width: 50%;
+    float: right;
+}
+

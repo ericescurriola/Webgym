@@ -1,0 +1,66 @@
+<!--
+  The user sees different library entrys in a list. The individual list entries can be expanded so
+  that the user can see the content of the entry.
+-->
+<div class="flexbox">
+  <h1>Bibliothek</h1>
+    <mat-accordion>
+  
+        <!--
+          The following code is a single list entry which is looped through with ngFor from the libraryData array. 
+        -->
+        <mat-expansion-panel class="libraryItem" *ngFor="let entry of libraryData">
+          <!--
+            The header contains an image of the entry, the title and the icon to extend the item.
+          -->
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <img class="image" src="{{entry.image}}">
+            </mat-panel-title>
+            <mat-panel-description>
+              {{entry.titel}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+  
+          <!--
+            From here the code for the extended range of the library entry begins.
+          -->
+          <!--
+            Table of Content
+          -->
+          <div class="libraryContent-container">
+            <div>
+              <h4>Inhalt</h4>
+              <div class="index-container">
+                <ol>
+                  <li *ngFor="let index of entry.index"><a>{{index.conentPoint}}</a></li>
+                </ol>                  
+              </div>
+            </div>
+    
+            <!--
+              Article Content
+            -->
+            <div>
+              <h4>{{ entry.titel }}</h4>
+              <br>
+              {{entry.description}}
+            </div>
+    
+            <!--
+              Sources of information for this article
+            -->
+            <div>
+              <div class="source-container">
+                  <h4>Quellen</h4>
+                  <div>
+                    <ul>
+                        <li *ngFor="let source of entry.source"><a>{{ source.link }}</a></li>
+                    </ul>                  
+                  </div>
+              </div>
+            </div>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+  </div>

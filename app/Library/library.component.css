@@ -1,0 +1,70 @@
+/* Main container in which the list entries are located */
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /*border: 2px solid black;*/
+}
+
+/* Defines the size and shape of the library image which sits on the item header */
+.image {
+    width: 40px;
+    height: 20px;
+}
+
+/* Styles for the individual list entry */
+.libraryItem {
+    padding: 10px;
+    margin: 10px;
+}
+
+/* In this container you will find the whole contents of the library entry, consequently the table of content, library text and sources. */
+.libraryContent-container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-gap: 10px;
+    /*border: 2px solid red;*/
+}
+
+.libraryContent-container > div {
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+    /*border: 2px solid violet;*/
+}
+
+/* This container contains the content points.  */
+.index-container {
+    display: grid;
+    grid-gap: 5px;
+    margin: 5px;
+    text-align: left;
+    /*border: 2px solid green;*/
+}
+
+.index-container > ol > li{
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    text-align: left;
+    /*border: 2px solid blue;*/
+}
+
+/* In this container the sources of the entry are listed. */
+.source-container {
+    display: grid;
+    grid-gap: 5px;
+    margin: 5px;
+    text-align: center;
+    /*border: 2px solid green;*/
+}
+
+.source-container > div {
+    text-align: center;
+    margin: 5px;
+    font-size: 15px;
+    position: relative;
+    /*border: 2px solid blue;*/
+}
+

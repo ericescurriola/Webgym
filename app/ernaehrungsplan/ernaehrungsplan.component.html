@@ -1,0 +1,48 @@
+<div class="example-container">
+  <h2>Esszeiten</h2>
+  
+  <!-- Morgen -->
+  <div cdkDropList class="example-list" #morgenList="cdkDropList" [cdkDropListData]="morgen" [cdkDropListConnectedTo]="[recipeList]" (cdkDropListDropped)="drop($event)">
+    <label>Morgen:</label>
+    <div class="example-box" *ngFor="let recipe of morgen" cdkDrag>{{ recipe.title }}</div>
+  </div>
+
+  <!-- Znüni -->
+  <div cdkDropList class="example-list" #znueniList="cdkDropList" [cdkDropListData]="znueni" [cdkDropListConnectedTo]="[recipeList]" (cdkDropListDropped)="drop($event)">
+    <label>Znüni:</label>
+    <div class="example-box" *ngFor="let recipe of znueni" cdkDrag>{{ recipe.title }}</div>
+  </div>
+
+  <!-- Mittag -->
+  <div cdkDropList class="example-list" #mittagList="cdkDropList" [cdkDropListData]="mittag" [cdkDropListConnectedTo]="[recipeList]" (cdkDropListDropped)="drop($event)">
+    <label>Mittag:</label>
+    <div class="example-box" *ngFor="let recipe of mittag" cdkDrag>{{ recipe.title }}</div>
+  </div>
+
+  <!-- Zvieri -->
+  <div cdkDropList class="example-list" #zvieriList="cdkDropList" [cdkDropListData]="zvieri" [cdkDropListConnectedTo]="[recipeList]" (cdkDropListDropped)="drop($event)">
+    <label>Zvieri:</label>
+    <div class="example-box" *ngFor="let recipe of zvieri" cdkDrag>{{ recipe.title }}</div>
+  </div>
+
+  <!-- Abend -->
+  <div cdkDropList class="example-list" #abendList="cdkDropList" [cdkDropListData]="abend" [cdkDropListConnectedTo]="[recipeList]" (cdkDropListDropped)="drop($event)">
+    <label>Abend:</label>
+    <div class="example-box" *ngFor="let recipe of abend" cdkDrag>{{ recipe.title }}</div>
+  </div>
+  
+  <!-- Nacht -->
+  <div cdkDropList class="example-list" #nachtList="cdkDropList" [cdkDropListData]="nacht" [cdkDropListConnectedTo]="[recipeList]" (cdkDropListDropped)="drop($event)">
+    <label>Nacht:</label>
+    <div class="example-box" *ngFor="let recipe of nacht" cdkDrag>{{ recipe.title }}</div>
+  </div>
+
+</div>
+
+<div class="example-container">
+  <h2>Rezepte</h2>
+  
+  <div cdkDropList class="example-list" #recipeList="cdkDropList" [cdkDropListData]="recipes" [cdkDropListConnectedTo]="[morgenList, znueniList, mittagList, zvieriList, abendList, nachtList]" (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let recipe of recipes" cdkDrag><div>{{ recipe.title }}</div></div>
+  </div>
+</div>
