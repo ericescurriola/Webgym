@@ -1,0 +1,7 @@
+<!-- A list with all journal entries listed as date -->
+<div class="container">
+  <ul>
+    <li (click)="selectEntry(singleEntry)" *ngFor="let singleEntry of journalService.getJournalEntry(localStorageKey)">{{ singleEntry.date }}</li>
+  </ul>
+  <button (click)="setLocalStorageEntry('TestUno', entrys)" >create local storage entry</button>
+</div>

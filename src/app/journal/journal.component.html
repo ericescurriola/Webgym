@@ -1,0 +1,23 @@
+<!--
+  This View is for the Journal. The goal is that the user can create new entrys but also
+  change the ones already written down.
+-->
+<div style="text-align:center">  <h1>Tagebuch</h1> </div>
+<div class="grid-container">
+  <div class="flex-item">  
+    <label>Datum:</label>
+    <input class="date-input" [(ngModel)]="date">
+
+    <!-- A list with all journal entries listed as date -->
+    <ul>
+      <li (click)="selectJournalEntry(singleEntry)" *ngFor="let singleEntry of journalService.getJournalEntry(localStorageKey)">{{ singleEntry.date }}</li>
+    </ul>
+  </div>
+
+  <!-- Journal entry input field and buttons -->
+  <div class="flex-item">
+    <input [(ngModel)]="journalText">
+    <button (click)="clearNewJournalEntry($event)">Clear</button>
+    <button (click)="saveJournalEntry()">Speichern</button>
+  </div>
+</div>

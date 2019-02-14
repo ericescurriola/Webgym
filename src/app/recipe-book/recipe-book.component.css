@@ -1,0 +1,68 @@
+/* Main container in which the list entries are located */
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /*border: 2px solid black;*/
+}
+
+/* Defines the size and shape of the recipe image which sits on the item header */
+.image {
+    width: 40px;
+    height: 20px;
+}
+
+/* Styles for the individual list entry */
+.recipeItem {
+    padding: 10px;
+    margin: 10px;
+}
+
+/* In this container you will find the whole contents of the recipe, consequently the list of ingredients, recipe description and macronutrient distribution. */
+.recipeContent-container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-gap: 10px;
+    padding: 10px;
+    /*border: 2px solid red;*/
+}
+
+.recipeContent-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    /*border: 2px solid violet;*/
+}
+
+/* In this container you will find the list of ingredients */
+.ingredient-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 5px;
+    padding: 5px;
+    /*border: 2px solid green;*/
+}
+
+.ingredient-container > div {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 12px;
+    /*border: 2px solid blue;*/
+}
+
+/* The macronutrient distribution is located in this container. */
+.macros-container {
+    display: grid;
+    grid-template-rows: 30px 30px 30px;
+    grid-gap: 5px;
+    padding: 5px;
+    /*border: 2px solid green;*/
+}
+
+.macros-container > div {
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    position: relative;
+    /*border: 2px solid blue;*/
+}

@@ -1,0 +1,59 @@
+<div class="grid-container">
+  <div class="example-container, grid-item">
+      <h2>Trainingsplan</h2>
+      <div>
+        <app-journal-entry-list></app-journal-entry-list>
+      </div>
+  </div>
+  <div class="example-container, grid-item">
+    <h2>Körperteile</h2>
+    <label>Trainingsplan Name:</label>
+    <br>
+    <input [(ngModel)]="workoutPlanName">
+    <hr>
+    <!-- Abs -->
+    <div cdkDropList class="example-list" #absList="cdkDropList" [cdkDropListData]="abs" [cdkDropListConnectedTo]="[excerciseList]" (cdkDropListDropped)="drop($event)">
+      <label>Bauchmuskeln:</label>
+      <div class="example-box" *ngFor="let excercise of abs" cdkDrag>{{ excercise.title }}</div>
+    </div>
+  
+    <!-- Arms -->
+    <div cdkDropList class="example-list" #armsList="cdkDropList" [cdkDropListData]="arms" [cdkDropListConnectedTo]="[excerciseList]" (cdkDropListDropped)="drop($event)">
+      <label>Arme:</label>
+      <div class="example-box" *ngFor="let excercise of arms" cdkDrag>{{ excercise.title }}</div>
+    </div>
+
+    <!-- Back -->
+    <div cdkDropList class="example-list" #backList="cdkDropList" [cdkDropListData]="back" [cdkDropListConnectedTo]="[excerciseList]" (cdkDropListDropped)="drop($event)">
+      <label>Ruecken:</label>
+      <div class="example-box" *ngFor="let excercise of back" cdkDrag>{{ excercise.title }}</div>
+    </div>
+  
+    <!-- Chest -->
+    <div cdkDropList class="example-list" #chestList="cdkDropList" [cdkDropListData]="chest" [cdkDropListConnectedTo]="[excerciseList]" (cdkDropListDropped)="drop($event)">
+      <label>Brust:</label>
+      <div class="example-box" *ngFor="let excercise of chest" cdkDrag>{{ excercise.title }}</div>
+    </div>
+  
+    <!-- Legs -->
+    <div cdkDropList class="example-list" #legsList="cdkDropList" [cdkDropListData]="legs" [cdkDropListConnectedTo]="[excerciseList]" (cdkDropListDropped)="drop($event)">
+      <label>Beine:</label>
+      <div class="example-box" *ngFor="let excercise of legs" cdkDrag>{{ excercise.title }}</div>
+    </div>
+    
+    <!-- Shoulders -->
+    <div cdkDropList class="example-list" #shouldersList="cdkDropList" [cdkDropListData]="shoulders" [cdkDropListConnectedTo]="[excerciseList]" (cdkDropListDropped)="drop($event)">
+      <label>Schultern:</label>
+      <div class="example-box" *ngFor="let excercise of shoulders" cdkDrag>{{ excercise.title }}</div>
+    </div>
+    <button>Speichern</button>
+  </div>
+  
+  <div class="example-container, grid-item">
+    <h2>Übungen</h2>
+    
+    <div cdkDropList class="example-list" #excerciseList="cdkDropList" [cdkDropListData]="excercises" [cdkDropListConnectedTo]="[absList, amrsList, backList, chestList, legsList, shoulldersList]" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let excercise of excercises" cdkDrag><div>{{ excercise.title }}</div></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+<!--
+  The user sees different recipes in a list. The individual list entries can be expanded so
+  that the user can see the ingredients, description and macronutrient distribution of the recipe.
+-->
+<div class="flexbox">
+  <h1>Rezeptbuch</h1>
+  <mat-accordion>
+
+      <!--
+        The following code is a single list entry which is looped through with ngFor from the recipe array. 
+      -->
+      <mat-expansion-panel class="recipeItem" *ngFor="let recipes of recipeHeader">
+        <!--
+          The header contains an image of the recipe, the recipe name and the icon to extend the item.
+        -->
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <img class="image" src="{{recipes.image}}">
+          </mat-panel-title>
+          <mat-panel-description>
+            {{recipes.recipeName}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!--
+          From here the code for the extended range of the recipe begins with a list of ingredients, recipe description and the macronutrient distribution.
+        -->
+        <!--
+          Ingredient list
+        -->
+        <div class="recipeContent-container">
+          <div>
+            <h4>Zutaten</h4>
+            <div class="ingredient-container" *ngFor="let entry of recipes.ingredients">
+              <div>
+                {{entry.amount}}
+              </div>
+              <div>
+                {{entry.ingredient}}
+              </div>
+                
+            </div>
+          </div>
+  
+          <!--
+            Recipe description
+          -->
+          <div>
+            <h4>Rezept Beschreibung</h4>
+            <br>
+            {{recipes.recipeDescription}}
+          </div>
+  
+          <!--
+            Macro nutrient distribution
+          -->
+          <div>
+            <div class="macros-container">
+                <h4>Makronährstoffe</h4>
+                <div>
+                  <b>Protein</b> {{recipes.macros[0].protein}}
+                </div>
+  
+                <div>
+                  <b>Fett</b> {{recipes.macros[0].fat}}
+                </div>
+                  
+                <div>
+                  <b>Kohlenhydrate</b> {{recipes.macros[0].carbs}}
+                </div>
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+</div>

@@ -1,0 +1,39 @@
+.container {
+    border: 1px solid red;
+    width: 400px;
+    height: 400px;
+}
+
+/* Layout for the grid-item */
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+/* Unsorted List style */
+ul {
+    display: block;
+    list-style-type: none;
+    margin: 0px 0px 5px 0px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: lightgray;
+    width: 33%;
+}
+
+/* List items style */
+li {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Hover effect for the list items */
+li:hover {
+    background-color: darkgrey;
+    cursor: pointer;
+}

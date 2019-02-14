@@ -1,0 +1,44 @@
+/* Defining a felxbox container to order the items correctly */
+.flexbox {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    background-color: var(--header-orange);
+    color: lightgray;
+    border-bottom-right-radius: 7.5px;
+    border-bottom-left-radius: 7.5px;
+}
+
+/* All div items within flexbox class */
+.flexbox > div {
+    width: 100px;
+    margin: 10px;
+    line-height: 30px;
+    font-size: 18px;
+}
+
+/* Second and last div child */
+.flexbox > div:nth-child(2) {
+    margin-left:auto;
+}
+
+/* unvisited link */
+a:link {
+    color: lightgray;
+}
+
+/* mouse over link */
+a:hover {
+    color: blue;
+}
+
+/* selected link */
+a:active {
+    color: darkblue;
+}
+
+/* visited link */
+a:visited {
+    color: lightgray;
+}
+  

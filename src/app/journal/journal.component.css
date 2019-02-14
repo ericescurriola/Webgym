@@ -1,0 +1,71 @@
+/* Layout for the surrounding grid container*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    /*border: 1px solid black;*/
+}
+
+/* Layout for the grid-item */
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    /*border: 1px solid red;*/
+}
+
+/* 'Datum' label */
+label {
+    margin-right: auto;
+}
+
+/* Inputfield for date */
+.date-input {
+    margin: 0px 0px 10px 0px;
+    width: 33%;
+}
+
+/* 'Neuer Eintrag' Button */
+.newEntry {
+    width: 33%;
+    margin: 10px 0px 10px 0px;
+}
+
+/* Unsorted List style */
+ul {
+    display: block;
+    list-style-type: none;
+    margin: 0px 0px 5px 0px;
+    padding: 5px 5px 5px 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: lightgray;
+    width: 33%;
+}
+
+/* List items style */
+li {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Hover effect for the list items */
+li:hover {
+    background-color: darkgrey;
+    cursor: pointer;
+}
+
+/* Inputfield for the journal text */
+.tagebuch-input {
+    height: 150px;
+}
+
+/* Styles of the buttons */
+button {
+    margin: 5px 0 0 0;
+}
+
