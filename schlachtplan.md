@@ -2,6 +2,10 @@
 
 Plan:
 1. Funktionalität von Trainingsplan und Ernährungsplan fertigstellen
+   (Der ganze Aufbau und Idee von Trainingsplan und Ernährungsplan gefällt mir nicht zu 100%, da
+   das Konzept welches ich verfolge auf dem Mobile view schlecht umsetzbar ist und die Umsetzung zu viel
+   Aufwand erfordert.)(Da ich unschlüssig bin wie ich diese Seiten aufbauen soll werde ich zu Punkt 2 springen
+   da ich mich mit Fred und Sarahi absprechen will und Sie um Ihren Rat fragen möchte.)
 2. Website redesign machen
    1. Bootstrap integrieren
    2. Momentanes Grid-Layout mit dem Bootstrap Grid-System auswechseln
