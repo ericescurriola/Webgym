@@ -66,6 +66,7 @@ import {
   MatTreeModule,
 } from '@angular/material';
 import { JournalEntryListComponent } from './journal/journal-entry-list/journal-entry-list.component';
+import { AppAsideComponent } from './app-aside/app-aside.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import { JournalEntryListComponent } from './journal/journal-entry-list/journal-
     TemplateComponent,
     HeaderComponent,
     JournalEntryListComponent,
+    AppAsideComponent,
     
   ],
   imports: [

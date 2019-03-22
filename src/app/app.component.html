@@ -1,16 +1,43 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="grid">
-  <app-header>
+<!-- The content below is only a placeholder and can be replaced.-->
+<!-- <div class="header">
+  <app-navigation></app-navigation>
+</div>
 
-  </app-header>
-  <app-navigation>
+<div class="left-aside">
+  <app-aside></app-aside>
+</div>
 
-  </app-navigation>
-  <router-outlet>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
 
+<div class="right-aside">
+  <app-aside></app-aside>
+</div>
 
-  </router-outlet>
-  <app-footer>
+<div class="footer">
+  <app-footer></app-footer>
+</div>  -->
 
-  </app-footer>
+<div class="container-fluid p-0">
+  
+  <div class="row">
+    <div class="col">
+      <app-navigation></app-navigation>
+    </div>
+  </div>
+
+  <div class="row main">
+    <div class="leftaside col-2"><app-aside></app-aside></div>
+
+    <div class="col-8"><router-outlet></router-outlet></div>
+
+    <div class="rightaside col-2 "><app-aside></app-aside></div>
+  </div>
+
+  <div class="footer row">
+    <div class="col 0">
+      <app-footer></app-footer>
+    </div>
+  </div>
 </div>
